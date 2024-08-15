@@ -3,6 +3,7 @@ const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const telephone = document.getElementById("telephone");
 
+// email
 let error = 0;
 const formValidation = (event) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,6 +33,8 @@ const formValidation = (event) => {
 
   // }
 
+
+  // password
   if (password.value == "") {
     password.style.border = "1px solid red";
     passwordError.textContent = "Please enter an password address";
@@ -48,6 +51,8 @@ const formValidation = (event) => {
     passwordError.textContent = "";
   }
 
+
+  // confirm password
   const confirmPasswordError = getElementById("confirmPasswordError");
   if (confirmPassword.value !== password.value) {
     confirmPassword.style.border = "1px solid red";
